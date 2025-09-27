@@ -270,6 +270,8 @@ body {
   }
   .generate-button {
     height: 65px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -277,4 +279,7 @@ body {
   body {
     padding-inline: calc((100% - 540px) / 2);
   }
+  .options {
+    gap: 16px;
+  } 
 }
