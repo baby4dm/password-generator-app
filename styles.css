@@ -39,6 +39,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 .created-password {
   font-size: 24px;
@@ -64,11 +65,13 @@ body {
   padding: 16px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .range-container {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .range-text {
   display: flex;
@@ -81,7 +84,7 @@ body {
   line-height: 20px;
   font-weight: 700;
 }
-.lenght-value {
+.length-value {
   color: #a4ffaf;
   font-weight: 700;
   font-size: 24px;
@@ -123,6 +126,7 @@ body {
   flex-direction: column;
   gap: 16px;
   font-size: 16px;
+  width: 100%;
 }
 .option {
   line-height: 20px;
@@ -148,9 +152,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+.option input[type="checkbox"]:not(:checked) {
+  border: 2px solid #e6e5ea;
+  background-color: transparent;
+  background-image: none;
+}
 .strength-container {
   background-color: #18171f;
-  height: 72px;
+  height: 56px;
   width: 100%;
   padding: 16px;
   display: flex;
@@ -211,4 +220,61 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding-inline: 98px;
+  }
+  .main-container {
+    min-height: 696px;
+  }
+  .main-title {
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .result-container {
+    margin-bottom: 8px;
+  }
+  .created-password,
+  .lenght-value {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .copy-icon {
+    height: 24px;
+  }
+  .copied-text,
+  .length-label,
+  .option,
+  .strength-title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .tools-container {
+    padding: 24px 32px;
+  }
+  .strength-container {
+    height: 72px;
+  }
+
+  .strength {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .strength-container {
+    margin-bottom: 32px;
+  }
+  .generate-button {
+    height: 65px;
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    padding-inline: calc((100% - 540px) / 2);
+  }
 }
